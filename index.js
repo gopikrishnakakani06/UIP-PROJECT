@@ -3,6 +3,7 @@ const app=express();
 const path=require('path');
 const mongoose = require("mongoose");
 const userRoutes = require('./server/routes/user');
+const postRoutes = require('./server/routes/post');
 
 require("dotenv").config();
 
@@ -30,7 +31,7 @@ app.use(function(req,res,next){
 
 
 app.use('/user', userRoutes);
-
+app.use('/post', postRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}!`));
