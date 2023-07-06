@@ -1,10 +1,16 @@
+import { Outlet, Link } from "react-router-dom";
+
 const Navbar= () => {
+
+
+  
+
 
     return (
 <div >
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid" >
-    <a className="navbar-brand" href="#">Welcome to our App!</a>
+    <Link className="navbar-brand" to="/">Welcome to our App!</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -12,20 +18,20 @@ const Navbar= () => {
       <ul className="navbar-nav"  >
        
         <li className="nav-item" class="Log1">
-          <a className="nav-link" href="#">Login</a>
+          <Link className="nav-link" to="/Login">Login</Link>
         </li>
         <li className="nav-item" class="Log2">
-          <a className="nav-link" href="#">Register</a>
+          <Link className="nav-link" to="/Register">Register</Link>
         </li>
         <li className="nav-item" class="Log3">
-            <a className="nav-link" href="#">Profile</a>
+            <Link className="nav-link" to="/Profile">Profile</Link>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-
+<Outlet />
 </div>
 
     );
